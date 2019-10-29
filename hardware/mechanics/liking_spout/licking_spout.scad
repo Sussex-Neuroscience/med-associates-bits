@@ -117,9 +117,9 @@ union(){
 module needlesupport(){
     module mainframe(){
 difference(){
-cube([nutd+8+2*headportwall,forcesensorw+2*headportwall,30+2*headportwall]);
+cube([8+2*headportwall,forcesensorw+2*headportwall,35+2*headportwall]);
 translate([headportwall,-headportwall,headportwall]){
-cube([8,forcesensorw+4*headportwall,30]);
+cube([8,forcesensorw+4*headportwall,28]);
 }//end translate
 }//end difference
 translate([headportwall,0,5]){
@@ -129,20 +129,32 @@ cube([8,forcesensorw+2*headportwall,headportwall]);
 
 difference(){
 mainframe();
-translate([13.5,(forcesensorw+2*headportwall)/2,12]){
-rotate([0,90,0]){    
+//translate([13.5,(forcesensorw+2*headportwall)/2,12]){
+//rotate([0,90,0]){    
 //%cylinder(d=nutd+2*tol,h=4,$fn=6);
-    translate([0,0,-6]){
-cylinder(d=screwd,h=12);
-}//rotate
-}//translate
-cube([nutd,nutd+10,nutd+tol],center=true);
-}//translate
-translate([headportwall+needlediameter/2+tol+forcesensorh/2,(forcesensorw+2*headportwall)/2,-headportwall-1]){
+//    translate([0,0,-6]){
+//cylinder(d=screwd,h=12);
+//}//rotate
+//}//translate
+//cube([nutd,nutd+10,nutd+tol],center=true);
+//}//translate
+translate([irrecd/2+2*headportwall,(forcesensorw+2*headportwall)/2,-headportwall-1]){
     rotate([0,0,0]){
-        cylinder(d=needlediameter+2*tol,h=20);
+        %cylinder(d=needlediameter+2*tol,h=20);
+    }//end rotate
+    translate([0,0,35+headportwall]){
+    rotate([90,0,0]){
+        
+        cylinder(d=irledd+2*tol,h=20);
+        
+    }//end rotate
+    rotate([-90,0,0]){
+        
+        cylinder(d=irrecd+2*tol,h=20);
+        
     }//end rotate
     }//end translate
+}//end translate
 
 
 
@@ -152,7 +164,18 @@ translate([headportwall,headportwall,10]){
     }//end translate
     
 }//end difference
+translate([(8+headportwall)/2+0.5,0,35+headportwall-irledd/2-0.5]){
+rotate([90,0,0]){
+ring(irledd+2*tol,2,irledh);
+}//end rotate
+}//end translate
+translate([(8+headportwall)/2+0.5,forcesensorw+2*headportwall,35+headportwall-irrecd]){
+rotate([-90,0,0]){
+ring(irrecd+2*tol,2,irrech);
 
+}//end rotate
+}//end translate
+//}//end translate
 }//end module
 
 
