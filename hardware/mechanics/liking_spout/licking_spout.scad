@@ -17,9 +17,9 @@ needlediameter = 1.53;
 
 //back plate dimensions 
 //(the plate that slides on the metal railings)
-backpanelx = 70;
-backpanely = 48;
-backpanelz = 2.5;
+backpanelx = 44.5*2;
+backpanely = 59.80;
+backpanelz = 2.15;
 
 supportw=5;
 
@@ -140,7 +140,7 @@ mainframe();
 //}//translate
 translate([irrecd/2+2*headportwall,(forcesensorw+2*headportwall)/2,-headportwall-1]){
     rotate([0,0,0]){
-        %cylinder(d=needlediameter+2*tol,h=20);
+        cylinder(d=needlediameter+2*tol,h=20);
     }//end rotate
     translate([0,0,35+headportwall]){
     rotate([90,0,0]){
@@ -230,7 +230,7 @@ irsupports();
 
 module backpanel(){
 difference(){
-translate([-(headportx+2*headportwall)/2,-headporty/2-headportwall-1,headportz-headportwall-0.5]){
+translate([-(headportx+2*headportwall)/2,-backpanely/2+headporty/2,headportz-headportwall-0.15]){
 
 cube([backpanelx,backpanely,backpanelz]);
     
@@ -244,17 +244,17 @@ cube([headportx,headporty,headportz]);
 
 
 ///////////////////////////
-//lickingport();
-//backpanel();
+lickingport();
+backpanel();
 ///////////////////////////
-/*
-translate([headportx/5+lickspoutoffset+tol,-headportwall,-(forcesensord+headportwall/2)]){
-rotate([0,0,180]){
+
+translate([5,headporty/2-(forcesensorw+2*headportwall)/2,-(35+2*headportwall)]){
+//rotate([0,0,180]){
 //fsensorholder();
 needlesupport();
-}//end rotate
+//}//end rotate
 }//end translate
-*/
+
 
 //
-needlesupport();
+//needlesupport();
