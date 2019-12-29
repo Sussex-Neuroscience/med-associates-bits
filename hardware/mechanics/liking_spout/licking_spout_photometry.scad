@@ -240,8 +240,8 @@ module covers(){
     difference(){
     
         cube([headportx-7,2*headportwall+irledh,headportz]);
-    translate([headportwall/2,headportwall+0.1,-0.1]){
-    cube([headportx-7-headportwall,headportwall+irledh,headportz-headportwall]);
+    translate([(headportwall*0.9)/2,headportwall+0.1,-.01]){
+    cube([headportx-7-headportwall*0.9,headportwall+irledh,headportz-headportwall*0.9]);
     }
 
 }//end difference
@@ -252,18 +252,19 @@ module covers(){
 lickingport();
 backpanel();
 ///////////////////////////
-
-translate([5,headporty/2-(forcesensorw+2*headportwall)/2,-(35+2*headportwall)]){
+*/
+//translate([5,headporty/2-(forcesensorw+2*headportwall)/2,-(35+2*headportwall)]){
 //rotate([0,0,180]){
 //fsensorholder();
 needlesupport();
 //}//end rotate
-}//end translate
+//}//end translate
 
 
 //
 //needlesupport();
-*/
+
+/*
 difference(){
 lickingport();
 translate([headportx-headportwall-5,-1,-2]){
@@ -297,6 +298,7 @@ covers();
 }//end translate
 }//end union
 }
+*/
 rotate([90,0,0]){
 translate([2*headportx,0,0]){
 covers();

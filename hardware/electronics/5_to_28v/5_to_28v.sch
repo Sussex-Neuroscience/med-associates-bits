@@ -1,5 +1,4 @@
 EESchema Schematic File Version 4
-LIBS:5_to_28v-cache
 EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
@@ -184,7 +183,7 @@ Wire Wire Line
 Wire Wire Line
 	2100 4800 2300 4800
 $Comp
-L MCU_Module:Arduino_Nano_v3.x A?
+L 5_to_28v-rescue:Arduino_Nano_v3.x-MCU_Module A?
 U 1 1 5DCCC149
 P 2500 2500
 F 0 "A?" V 2546 1456 50  0000 R CNN

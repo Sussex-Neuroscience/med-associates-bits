@@ -1,0 +1,3 @@
+(sym_lib_table
+  (lib (name 5_to_28v-rescue)(type Legacy)(uri ${KIPRJMOD}/5_to_28v-rescue.lib)(options "")(descr ""))
+)
