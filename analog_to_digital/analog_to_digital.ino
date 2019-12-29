@@ -15,9 +15,9 @@ void setup() {
   Serial.begin(9600);
   pinMode(digOutPin, OUTPUT);
   pinMode(digOutPin1, OUTPUT);
-  pinMode(ledInd, OUTPUT); 
-  pinMode(ledInd1, OUTPUT); 
-  
+  pinMode(ledInd, OUTPUT);
+  pinMode(ledInd1, OUTPUT);
+
   // put your setup code here, to run once:
 
 }
@@ -32,7 +32,7 @@ void loop() {
   //Serial.println(IRread);
   //Serial.print("pote: ");
   //Serial.println(compRead);
-  
+
   if (IRread>=compRead){
     digitalWrite(digOutPin, HIGH);
     digitalWrite(ledInd, HIGH);
@@ -50,7 +50,7 @@ void loop() {
     digitalWrite(digOutPin1, HIGH);
     digitalWrite(ledInd1, HIGH);
   }
-  
+
   // put your main code here, to run repeatedly:
 
 }
