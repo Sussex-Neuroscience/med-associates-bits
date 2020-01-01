@@ -1,7 +1,18 @@
-# equipment_repository_template
+# Med Associates open source add on
 
-This is a template repository. should be used as a guideline by people/groups developing equipment in this project
 
-Readme can have a link to all the relevant files/documents and can/should be used to give examples of data collected with the device as well as the rational behind its construction.
+ Med Associates sells a behavioural system for rodents. This commercial system is a complete solution for behavioural experiments, and can be used to run multiple behavioural boxes in parallel. It is unfortunately rather expensive and closed source, so users are almost always dependent on MedAssociates for upgrades and customization (and whenever something breaks). Another downside is that an unusual 28V system is employed, so adding/customizing things has an extra layer of complexity.
 
-Should also have mentions to code of conduct and contributing guidelines.
+ Trying to bypass the above mentioned issues, but without discarding the entire system/re-implementing things from zero, this project was started. The goal is to create a "translator" that allows for the use of off-the-shelf electronics and DIY solutions with the Med Associates systems. This way experiments can be programmed the same way as before, but with more flexibility in terms of what can be achieved, at a much faster pace.
+
+ - This system can be divided into two parts:
+   - **Core**, which basically translates MedAssociates 28V signals to 5V signals (and vice versa), using an arduino Nano, a voltage regulator, transistors and some resistors.
+   - **sensors and actuators**, which are any sort of electronics that can run with an arduino: Leds, infrared detectors, motors, etc.
+
+
+
+### [License](./LICENSE)
+
+### [Code of Conduct](./code_of_conduct.md)
+
+### [Contributing](./contributing.md)
